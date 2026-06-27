@@ -31,8 +31,8 @@ export function PersonalDetailsStep({ form }: StepProps) {
             id="firstName"
             type="text"
             {...register("firstName")}
-            className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 ${
-              errors.firstName ? "border-red-500 bg-red-50" : "border-gray-300 bg-white"
+            className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 text-gray-900 ${
+              errors.firstName ? "border-red-500 bg-red-50" : "border-gray-300 bg-gray-50 focus:bg-white"
             }`}
             placeholder="John"
           />
@@ -49,8 +49,8 @@ export function PersonalDetailsStep({ form }: StepProps) {
             id="lastName"
             type="text"
             {...register("lastName")}
-            className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 ${
-              errors.lastName ? "border-red-500 bg-red-50" : "border-gray-300 bg-white"
+            className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 text-gray-900 ${
+              errors.lastName ? "border-red-500 bg-red-50" : "border-gray-300 bg-gray-50 focus:bg-white"
             }`}
             placeholder="Doe"
           />
@@ -68,8 +68,8 @@ export function PersonalDetailsStep({ form }: StepProps) {
           id="dateOfBirth"
           type="date"
           {...register("dateOfBirth")}
-          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 ${
-            errors.dateOfBirth ? "border-red-500 bg-red-50" : "border-gray-300 bg-white"
+          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 text-gray-900 ${
+            errors.dateOfBirth ? "border-red-500 bg-red-50" : "border-gray-300 bg-gray-50 focus:bg-white"
           }`}
         />
         {errors.dateOfBirth && (

@@ -4,15 +4,19 @@ import { motion } from "framer-motion";
 
 interface StepProps {
   form: UseFormReturn<FormValues>;
+  onEdit: (stepIndex: number) => void;
+  isConfirmed: boolean;
+  setIsConfirmed: (value: boolean) => void;
 }
 
-export function FinalReviewStep({ form }: StepProps) {
+export function FinalReviewStep({ form, onEdit, isConfirmed, setIsConfirmed }: StepProps) {
   const { getValues } = form;
   const values = getValues();
 
   const sections = [
     {
       title: "Personal Details",
+      stepIndex: 0,
       data: {
         "First Name": values.firstName,
         "Last Name": values.lastName,
@@ -21,6 +25,7 @@ export function FinalReviewStep({ form }: StepProps) {
     },
     {
       title: "Contact Information",
+      stepIndex: 1,
       data: {
         "Email": values.email,
         "Phone": values.phone,
@@ -29,6 +34,7 @@ export function FinalReviewStep({ form }: StepProps) {
     },
     {
       title: "Skills & Experience",
+      stepIndex: 2,
       data: {
         "Role": values.role,
         "Years of Experience": values.yearsOfExperience,
@@ -52,8 +58,17 @@ export function FinalReviewStep({ form }: StepProps) {
 
       <div className="space-y-6">
         {sections.map((section, index) => (
-          <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-100">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">{section.title}</h3>
+          <div key={index} className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm relative">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-lg font-semibold text-gray-800">{section.title}</h3>
+              <button
+                type="button"
+                onClick={() => onEdit(section.stepIndex)}
+                className="text-sm text-indigo-600 hover:text-indigo-800 font-medium hover:underline"
+              >
+                Edit
+              </button>
+            </div>
             <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
               {Object.entries(section.data).map(([key, value]) => (
                 <div key={key}>
@@ -64,6 +79,19 @@ export function FinalReviewStep({ form }: StepProps) {
             </dl>
           </div>
         ))}
+      </div>
+
+      <div className="mt-8 p-4 bg-indigo-50 border border-indigo-100 rounded-xl flex items-start space-x-3">
+        <input 
+          type="checkbox" 
+          id="confirmInfo" 
+          checked={isConfirmed}
+          onChange={(e) => setIsConfirmed(e.target.checked)}
+          className="mt-1 w-5 h-5 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500 cursor-pointer" 
+        />
+        <label htmlFor="confirmInfo" className="text-sm text-indigo-900 cursor-pointer font-medium">
+          I have reviewed the information above and confirm that all details are accurate and correct.
+        </label>
       </div>
     </motion.div>
   );

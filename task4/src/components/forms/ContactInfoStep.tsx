@@ -30,8 +30,8 @@ export function ContactInfoStep({ form }: StepProps) {
           id="email"
           type="email"
           {...register("email")}
-          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 ${
-            errors.email ? "border-red-500 bg-red-50" : "border-gray-300 bg-white"
+          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 text-gray-900 ${
+            errors.email ? "border-red-500 bg-red-50" : "border-gray-300 bg-gray-50 focus:bg-white"
           }`}
           placeholder="john.doe@example.com"
         />
@@ -48,8 +48,8 @@ export function ContactInfoStep({ form }: StepProps) {
           id="phone"
           type="tel"
           {...register("phone")}
-          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 ${
-            errors.phone ? "border-red-500 bg-red-50" : "border-gray-300 bg-white"
+          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 text-gray-900 ${
+            errors.phone ? "border-red-500 bg-red-50" : "border-gray-300 bg-gray-50 focus:bg-white"
           }`}
           placeholder="+1 (555) 000-0000"
         />
@@ -66,8 +66,8 @@ export function ContactInfoStep({ form }: StepProps) {
           id="address"
           rows={3}
           {...register("address")}
-          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 resize-none ${
-            errors.address ? "border-red-500 bg-red-50" : "border-gray-300 bg-white"
+          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 resize-none text-gray-900 ${
+            errors.address ? "border-red-500 bg-red-50" : "border-gray-300 bg-gray-50 focus:bg-white"
           }`}
           placeholder="123 Main St, City, Country"
         />

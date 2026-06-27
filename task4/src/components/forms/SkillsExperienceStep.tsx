@@ -30,8 +30,8 @@ export function SkillsExperienceStep({ form }: StepProps) {
           id="role"
           type="text"
           {...register("role")}
-          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 ${
-            errors.role ? "border-red-500 bg-red-50" : "border-gray-300 bg-white"
+          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 text-gray-900 ${
+            errors.role ? "border-red-500 bg-red-50" : "border-gray-300 bg-gray-50 focus:bg-white"
           }`}
           placeholder="Frontend Developer"
         />
@@ -48,8 +48,8 @@ export function SkillsExperienceStep({ form }: StepProps) {
           id="yearsOfExperience"
           type="number"
           {...register("yearsOfExperience")}
-          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 ${
-            errors.yearsOfExperience ? "border-red-500 bg-red-50" : "border-gray-300 bg-white"
+          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 text-gray-900 ${
+            errors.yearsOfExperience ? "border-red-500 bg-red-50" : "border-gray-300 bg-gray-50 focus:bg-white"
           }`}
           placeholder="2"
         />
@@ -66,8 +66,8 @@ export function SkillsExperienceStep({ form }: StepProps) {
           id="portfolioUrl"
           type="url"
           {...register("portfolioUrl")}
-          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 ${
-            errors.portfolioUrl ? "border-red-500 bg-red-50" : "border-gray-300 bg-white"
+          className={`w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all duration-200 text-gray-900 ${
+            errors.portfolioUrl ? "border-red-500 bg-red-50" : "border-gray-300 bg-gray-50 focus:bg-white"
           }`}
           placeholder="https://yourportfolio.com"
         />

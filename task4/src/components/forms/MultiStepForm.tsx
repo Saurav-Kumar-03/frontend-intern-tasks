@@ -22,6 +22,7 @@ const steps = [
 export function MultiStepForm() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isConfirmed, setIsConfirmed] = useState(false);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -101,7 +102,15 @@ export function MultiStepForm() {
                 {currentStep === 0 && <PersonalDetailsStep key="step1" form={form} />}
                 {currentStep === 1 && <ContactInfoStep key="step2" form={form} />}
                 {currentStep === 2 && <SkillsExperienceStep key="step3" form={form} />}
-                {currentStep === 3 && <FinalReviewStep key="step4" form={form} />}
+                {currentStep === 3 && (
+                  <FinalReviewStep 
+                    key="step4" 
+                    form={form} 
+                    onEdit={(index) => setCurrentStep(index)} 
+                    isConfirmed={isConfirmed}
+                    setIsConfirmed={setIsConfirmed}
+                  />
+                )}
               </AnimatePresence>
             </div>
 
@@ -109,7 +118,6 @@ export function MultiStepForm() {
               <button
                 type="button"
                 onClick={prevStep}
-                disabled={currentStep === 0}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all ${
                   currentStep === 0
                     ? "opacity-0 pointer-events-none"
@@ -132,13 +140,17 @@ export function MultiStepForm() {
               ) : (
                 <button
                   type="submit"
-                  disabled={form.formState.isSubmitting}
-                  className="flex items-center space-x-2 px-8 py-3 bg-green-600 text-white rounded-full font-medium hover:bg-green-700 transition-all hover:shadow-lg hover:shadow-green-200 disabled:opacity-70"
+                  disabled={form.formState.isSubmitting || !isConfirmed ? true : undefined}
+                  className={`flex items-center space-x-2 px-8 py-3 rounded-full font-medium transition-all ${
+                    form.formState.isSubmitting || !isConfirmed
+                      ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                      : "bg-green-600 text-white hover:bg-green-700 hover:shadow-lg hover:shadow-green-200"
+                  }`}
                 >
                   {form.formState.isSubmitting ? (
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                   ) : (
-                    <span>Submit</span>
+                    <span>Confirm & Submit</span>
                   )}
                   <CheckCircle2 className="w-4 h-4" />
                 </button>
