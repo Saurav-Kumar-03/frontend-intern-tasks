@@ -18,7 +18,7 @@ export const mockDoctors = [
     experience: "15 Years",
     rating: 4.8,
     reviews: 124,
-    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
+    avatar: "https://randomuser.me/api/portraits/men/43.jpg",
     about: "Experienced general practitioner dedicated to holistic patient care and preventative medicine.",
     availability: ["09:00 AM", "10:00 AM", "11:30 AM", "02:00 PM", "04:00 PM"]
   },
@@ -29,7 +29,7 @@ export const mockDoctors = [
     experience: "12 Years",
     rating: 4.9,
     reviews: 89,
-    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+    avatar: "https://randomuser.me/api/portraits/women/43.jpg",
     about: "Specializes in cardiovascular health with a focus on non-invasive diagnostics.",
     availability: ["01:00 PM", "02:30 PM", "03:30 PM", "05:00 PM"]
   },
@@ -40,7 +40,7 @@ export const mockDoctors = [
     experience: "20 Years",
     rating: 4.7,
     reviews: 210,
-    avatar: "https://i.pravatar.cc/150?u=a04258114e29026702d",
+    avatar: "https://randomuser.me/api/portraits/men/50.jpg",
     about: "Expert in neurodegenerative disorders and migraine management.",
     availability: ["10:00 AM", "11:00 AM", "01:00 PM"]
   }
