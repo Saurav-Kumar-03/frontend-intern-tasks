@@ -28,7 +28,7 @@ export function DoctorProfile({ doctorId = "D001" }: { doctorId?: string }) {
           </div>
 
           <div className="flex gap-2 w-full">
-            <Button className="flex-1" gap-2><MessageSquare className="w-4 h-4" /> Message</Button>
+            <Button className="flex-1 gap-2"><MessageSquare className="w-4 h-4" /> Message</Button>
             <Button variant="outline" size="icon"><Video className="w-4 h-4 text-primary" /></Button>
           </div>
 
