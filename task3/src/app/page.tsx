@@ -1,6 +1,8 @@
 import { StatCards } from "@/components/dashboard/StatCards";
 import { PatientList } from "@/components/dashboard/PatientList";
 import { Timeline } from "@/components/dashboard/Timeline";
+import { UpcomingAppointments } from "@/components/dashboard/UpcomingAppointments";
+import { Notifications } from "@/components/dashboard/Notifications";
 
 export default function DashboardPage() {
   return (
@@ -14,6 +16,11 @@ export default function DashboardPage() {
       <StatCards />
 
       {/* Module A: Patient Dashboard Content */}
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <UpcomingAppointments />
+        <Notifications />
+      </div>
+
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <PatientList />
         <Timeline />
