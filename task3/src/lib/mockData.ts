@@ -1,19 +1,19 @@
 export const mockPatients = [
-  { id: "P001", name: "Sarah Jenkins", age: 34, lastVisit: "2026-06-15", condition: "Healthy", status: "Active" },
-  { id: "P002", name: "Michael Chang", age: 45, lastVisit: "2026-07-02", condition: "Hypertension", status: "Active" },
-  { id: "P003", name: "Emma Rodriguez", age: 28, lastVisit: "2026-05-20", condition: "Asthma", status: "Inactive" },
+  { id: "P001", name: "Aarav Patel", age: 34, lastVisit: "2026-06-15", condition: "Healthy", status: "Active" },
+  { id: "P002", name: "Priya Sharma", age: 45, lastVisit: "2026-07-02", condition: "Hypertension", status: "Active" },
+  { id: "P003", name: "Rohan Desai", age: 28, lastVisit: "2026-05-20", condition: "Asthma", status: "Inactive" },
 ];
 
 export const mockAppointments = [
-  { id: "A001", patientName: "Sarah Jenkins", date: "2026-07-15", time: "10:00 AM", doctor: "Dr. Alan Smith", type: "General Checkup", status: "Upcoming" },
-  { id: "A002", patientName: "Michael Chang", date: "2026-07-16", time: "02:30 PM", doctor: "Dr. Emily Chen", type: "Cardiology Review", status: "Upcoming" },
-  { id: "A003", patientName: "John Doe", date: "2026-07-10", time: "11:15 AM", doctor: "Dr. Alan Smith", type: "Follow-up", status: "Completed" },
+  { id: "A001", patientName: "Aarav Patel", date: "2026-07-15", time: "10:00 AM", doctor: "Dr. Vikram Singh", type: "General Checkup", status: "Upcoming" },
+  { id: "A002", patientName: "Priya Sharma", date: "2026-07-16", time: "02:30 PM", doctor: "Dr. Ananya Reddy", type: "Cardiology Review", status: "Upcoming" },
+  { id: "A003", patientName: "Kabir Khan", date: "2026-07-10", time: "11:15 AM", doctor: "Dr. Vikram Singh", type: "Follow-up", status: "Completed" },
 ];
 
 export const mockDoctors = [
   {
     id: "D001",
-    name: "Dr. Alan Smith",
+    name: "Dr. Vikram Singh",
     specialty: "General Practice",
     experience: "15 Years",
     rating: 4.8,
@@ -24,7 +24,7 @@ export const mockDoctors = [
   },
   {
     id: "D002",
-    name: "Dr. Emily Chen",
+    name: "Dr. Ananya Reddy",
     specialty: "Cardiology",
     experience: "12 Years",
     rating: 4.9,
@@ -35,7 +35,7 @@ export const mockDoctors = [
   },
   {
     id: "D003",
-    name: "Dr. Marcus Johnson",
+    name: "Dr. Rajesh Gupta",
     specialty: "Neurology",
     experience: "20 Years",
     rating: 4.7,
@@ -60,7 +60,7 @@ export const mockStats = {
 };
 
 export const mockTimeline = [
-  { id: "T1", time: "10:30 AM", event: "Patient Sarah Jenkins checked in." },
-  { id: "T2", time: "09:15 AM", event: "Dr. Chen updated medical records for Michael Chang." },
+  { id: "T1", time: "10:30 AM", event: "Patient Aarav Patel checked in." },
+  { id: "T2", time: "09:15 AM", event: "Dr. Reddy updated medical records for Priya Sharma." },
   { id: "T3", time: "Yesterday", event: "System maintenance completed successfully." }
 ];
